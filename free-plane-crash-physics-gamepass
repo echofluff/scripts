@@ -7,7 +7,7 @@ local Info = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Info:AddParagraph("Credits","hii, script is made by echofluff, if you would like to showcase this script, please credit me at youtube.com/@_echofluff ! thank for using my script, enjoy!")
+Info:AddParagraph("Credits","hii ! thank for using this script, enjoy!")
 
 local Tab = Window:MakeTab({
 	Name = "Fast Planes",
