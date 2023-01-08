@@ -1,0 +1,119 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Plane Crash System", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Info = Window:MakeTab({
+	Name = "Info",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Info:AddParagraph("Credits","hii, script is made by echofluff, if you would like to showcase this script, please credit me at youtube.com/@_echofluff ! thank for using my script, enjoy!")
+
+local Tab = Window:MakeTab({
+	Name = "Fast Planes",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Starfly",
+	Callback = function()
+      		local args = {
+    [1] = "[FAST] Starfly"
+}
+
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tactical Jet",
+	Callback = function()
+      		local args = {
+    [1] = "[FAST] Tactical Jet"
+}
+
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
+
+  	end    
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Military",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab2:AddButton({
+	Name = "Ray Bomber",
+	Callback = function()
+      		local args = {
+    [1] = "[MILITARY] Ray bomber"
+}
+
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "Ray Helicopter",
+	Callback = function()
+      		local args = {
+    [1] = "[MILITARY] Ray helicopter"
+}
+
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "Cargo Bomber",
+	Callback = function()
+      		local args = {
+    [1] = "[MILITARY] Cargo bomber"
+}
+
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab2:AddButton({
+	Name = "Fighter Jet",
+	Callback = function()
+      		local args = {
+    [1] = "[MILITARY] Fighter Jet"
+}
+
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
+      		
+  	end    
+})
+
+local Tab3 = Window:MakeTab({
+	Name = "Other",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab3:AddSlider({
+	Name = "Walkspeed",
+	Min = 0,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(Value)
+		local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoid = character:WaitForChild("Humanoid")
+humanoid.WalkSpeed = (Value)
+		
+	end    
+})
+OrionLib:Init()
