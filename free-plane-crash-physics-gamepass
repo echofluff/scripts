@@ -116,4 +116,14 @@ humanoid.WalkSpeed = (Value)
 		
 	end    
 })
+
+Tab2:AddButton({
+	Name = "Infinite Cash",
+	Callback = function()
+      		while wait() do
+    game:GetService("ReplicatedStorage").GetCash:FireServer()
+end   		
+  	end    
+})
+
 OrionLib:Init()
