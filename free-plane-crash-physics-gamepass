@@ -7,7 +7,7 @@ local Info = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Info:AddParagraph("Credits","hii ! thank for using this script, enjoy!")
+Info:AddParagraph("Credits","hii ! thank for using this script, enjoy! -echofluwuff was here")
 
 local Tab = Window:MakeTab({
 	Name = "Fast Planes",
@@ -117,7 +117,7 @@ humanoid.WalkSpeed = (Value)
 	end    
 })
 
-Tab2:AddButton({
+Tab3:AddButton({
 	Name = "Infinite Cash",
 	Callback = function()
       		while wait() do
