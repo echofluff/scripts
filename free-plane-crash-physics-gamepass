@@ -1,0 +1,2 @@
+--oopsies i fucked up, heres a working version :DD 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/echohub%20loader",true))()
