@@ -29,7 +29,6 @@ game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
   	end    
 })
 
-]
 
 local Tab3 = Window:MakeTab({
 	Name = "Other",
