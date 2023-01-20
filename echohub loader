@@ -1,0 +1,32 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "EchoHub Loader", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Info",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Loader",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Credits","hii ! thank for using this script, enjoy! -echofluwuff was here")
+Tab2:AddParagraph("Script Support","Plane Crash Physics | Boat Crash Physics")
+
+Tab2:AddButton({
+	Name = "Load Script",
+	Callback = function()
+	    if game.PlaceId==12137499703 
+	            then loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/boat%20crash%20system%20script%20source"))()
+	            end
+	            
+	    if game.PlaceId==9585800888
+	            then loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/plane%20crash%20system%20source"))()
+	            end
+	   end
+})
+OrionLib:Init()
