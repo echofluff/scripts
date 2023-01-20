@@ -1,0 +1,56 @@
+--INGameWorks Studio are bozos :DD -echofluwuwff was here
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Ship Crash Physics", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Info = Window:MakeTab({
+	Name = "Info",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Info:AddParagraph("Credits","hii ! thank for using this script, enjoy! -echofluwuff was here")
+
+local Tab = Window:MakeTab({
+	Name = "Titanic Gamepass",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Titanic",
+	Callback = function()
+      		local args = {
+    [1] = "Titanic"
+}
+
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(unpack(args))
+  	end    
+})
+
+]
+
+local Tab3 = Window:MakeTab({
+	Name = "Other",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab3:AddSlider({
+	Name = "Walkspeed",
+	Min = 0,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(Value)
+		local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoid = character:WaitForChild("Humanoid")
+humanoid.WalkSpeed = (Value)
+		
+	end    
+})
+OrionLib:Init()
