@@ -15,7 +15,7 @@ local Tab2 = Window:MakeTab({
 })
 
 Tab:AddParagraph("Credits","hii ! thank for using this script, enjoy! -echofluwuff was here")
-Tab2:AddParagraph("Script Support","Plane Crash Physics | Boat Crash Physics")
+Tab2:AddParagraph("Script Support","Plane Crash Physics | Boat Crash Physics | Rate My Avatar")
 
 Tab2:AddButton({
 	Name = "Load Script",
