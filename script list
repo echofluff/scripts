@@ -1,0 +1,8 @@
+-- loader isn't working? heres my scripts i've made!!
+
+-- rate my avatar
+loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/rate%20my%20avatar%20source"))()
+-- ship crash physics
+loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/boat%20crash%20system%20script%20source"))()
+-- plane crash physics
+loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/plane%20crash%20system%20source"))()
