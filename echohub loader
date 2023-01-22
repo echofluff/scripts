@@ -27,6 +27,10 @@ Tab2:AddButton({
 	    if game.PlaceId==9585800888
 	            then loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/plane%20crash%20system%20source"))()
 	            end
+		    
+	    if game.PlaceId==6708206173
+	            then loadstring(game:HttpGet("https://raw.githubusercontent.com/echofluff/scripts/main/rate%20my%20avatar%20source"))()
+	            end
 	   end
 })
 OrionLib:Init()
