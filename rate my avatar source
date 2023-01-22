@@ -180,4 +180,28 @@ end
   	end    
 })
 
+-pov trying to reach more words in essay
+local bozo = Window:MakeTab({
+	Name = "Other",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+bozo:AddSlider({
+	Name = "Walkspeed",
+	Min = 0,
+	Max = 200,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(Value)
+		local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoid = character:WaitForChild("Humanoid")
+humanoid.WalkSpeed = (Value)
+		
+	end    
+})
+
 OrionLib:Init()
