@@ -1,0 +1,183 @@
+--kinda shitty but eh
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Rate My Avatar", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+
+--info
+local Info = Window:MakeTab({
+	Name = "Info",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Info:AddParagraph("Credits","hii ! thank for using this script, enjoy! -echofluwuff was here")
+--tabs
+local Tab = Window:MakeTab({
+	Name = "Animated Booths",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Animated Signs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--animated booths
+
+Tab:AddButton({
+	Name = "Furry Test",
+	Callback = function()
+      		while wait(0) do
+
+local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "❓Roblox Furry Test❓\n📸Screenshot For Results📸\nnot even close to being a furry",
+        ["ImageId"] = 8024581822
+    }
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+wait(0.05)
+
+local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "❓Roblox Furry Test❓\n📸Screenshot For Results📸\nmaybe you're a furry",
+        ["ImageId"] = 11633257812
+    }
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+wait(0.05)
+
+local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "❓Roblox Furry Test❓\n📸Screenshot For Results📸\n def a furry LOL",
+        ["ImageId"] = 7966839707
+    }
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+wait(0.05)
+
+local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "❓Roblox Furry Test❓\n📸Screenshot For Results📸\nu like just the art",
+        ["ImageId"] = 11993948388
+    }
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+wait(0.05)
+
+local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "❓Roblox Furry Test❓\n📸Screenshot For Results📸\nthinking of becoming furry",
+        ["ImageId"] = 403653616
+    }
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+wait(0.05)
+
+local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "❓Roblox Furry Test❓\n📸Screenshot For Results📸\n just a catgirl",
+        ["ImageId"] = 6487432045
+    }
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+wait(0.05)
+
+local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "❓Roblox Furry Test❓\n📸Screenshot For Results📸\nsecret ending owo",
+        ["ImageId"] = 7388467515
+    }
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+wait(0.05)
+
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Chat Logger Booth",
+	Callback = function()
+      		local players = game.Players:GetChildren()
+local player = game.Players.LocalPlayer
+
+for i, player in pairs(players) do
+    if player == player then
+        player.Chatted:Connect(function(message)
+            local args = {
+                [1] = "Update",
+                [2] = {
+                 ["DescriptionText"] = (player.Name .. ": " .. message),
+                 ["ImageId"] = 6429025023
+             }
+            }
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+
+        end)
+    end
+end
+
+  	end    
+})
+
+--tab 2
+Tab2:AddButton({
+	Name = "Chat Logs Sign",
+	Callback = function()
+      		local players = game.Players:GetChildren()
+local player = game.Players.LocalPlayer
+
+for i, player in pairs(players) do
+    if player == player then
+        player.Chatted:Connect(function(message)
+            local args = {
+    [1] = "Text",
+    [2] = (player.Name .. ": " .. message)
+}
+
+game:GetService("ReplicatedStorage").UpdateSign:FireServer(unpack(args))
+
+        end)
+    end
+end
+  	end    
+})
+
+OrionLib:Init()
