@@ -180,7 +180,7 @@ end
   	end    
 })
 
--pov trying to reach more words in essay
+--pov trying to reach more words in essay
 local bozo = Window:MakeTab({
 	Name = "Other",
 	Icon = "rbxassetid://4483345998",
