@@ -3,29 +3,19 @@
 -- dupe found by Tensei#0227
 
 local player = game.Players.LocalPlayer
-
 local time = player:WaitForChild("leaderstats").Time
-
 local maxTime = 9 * 10^18
 
 while true do
-
     wait()
 
     if time.Value > maxTime then
-
-      player:Kick("Finished Duping")
-
+        break -- End the loop
     end
 
     local args = {
-
         [1] = "50050000000000000",
-
         [2] = "withdraw"
-
     }
-
     game:GetService("ReplicatedStorage").ATMRemoteEvent:FireServer(unpack(args))
-
 end
